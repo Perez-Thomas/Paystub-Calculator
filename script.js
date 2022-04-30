@@ -13,11 +13,17 @@ function allFunctions(){
     medicare();
     netIncome();
     taxTotals();
+    noticeToUser();
 };
 
 // FEDERAL - TAX BRACKETS
 function federal() {
-    document.querySelector("html").style.backgroundColor = "violet";
+    document.querySelector("html").style.backgroundColor = "lightblue";
+    document.querySelector(".incomeContainer").style.backgroundColor = "lightblue";
+    document.querySelector(".taxesContainer").style.backgroundColor = "lightyellow";
+    document.querySelector(".retirementContainer").style.backgroundColor = "lightgreen";
+
+
     // Here I used window. rather than let or const so it is global
     window.grossInputSalary = document.getElementById("myText").value;
     // INCOME - First Row
@@ -157,6 +163,12 @@ function local() {
 
 
 // SOCIAL SECURITY - TAX BRACKETS
+function netIncome() {
+    document.getElementById("yearlyNet").innerHTML = "$" + (grossInputSalary - (federalTaxTotal + stateTaxTotal +localTaxTotal));
+    document.getElementById("monthlyNet").innerHTML = "$" + parseInt((grossInputSalary - (federalTaxTotal + stateTaxTotal +localTaxTotal))/12);
+    document.getElementById("biweeklyNet").innerHTML = "$" + parseInt((grossInputSalary - (federalTaxTotal + stateTaxTotal +localTaxTotal))/24);
+}
+
 function socialSecurity() {
   let grossInputSalary = document.getElementById("myText").value;
   document.getElementById("socialSecurity").innerHTML = "$" + parseInt(grossInputSalary * 0.062);
@@ -168,15 +180,15 @@ function medicare() {
   document.getElementById("medicare").innerHTML = "$" + parseInt(grossInputSalary * 0.0145);
 }
 
-function netIncome() {
-    document.getElementById("yearlyNet").innerHTML = "$" + (grossInputSalary - (federalTaxTotal + stateTaxTotal +localTaxTotal));
-    document.getElementById("monthlyNet").innerHTML = "$" + parseInt((grossInputSalary - (federalTaxTotal + stateTaxTotal +localTaxTotal))/12);
-    document.getElementById("biweeklyNet").innerHTML = "$" + parseInt((grossInputSalary - (federalTaxTotal + stateTaxTotal +localTaxTotal))/24);
-}
+
 
 function taxTotals() {
     document.getElementById("taxTotals").innerHTML = "$" + (federalTaxTotal + stateTaxTotal +localTaxTotal);
 }
+
+function noticeToUser(){
+    alert("These are the taxes and benefits cost if you live in NYC.");
+};
 
 
 // document.getElementById("biweeklyNet").innerHTML = "$" + parseInt((grossInputSalary * 2);
