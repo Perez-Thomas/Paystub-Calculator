@@ -77,7 +77,7 @@ function federal() {
 
 // NEW YORK - STATE TAX BRACKETS
 function state() {
-    let inputState = document.getElementById("myState").value;
+//     let inputState = document.getElementById("myState").value;
 
     let firstNYBracketMax = 8500;
     let secondNYBracketMax = 11700;
