@@ -99,7 +99,7 @@ function state() {
     let stateTaxes = document.getElementById("stateTaxes");
     window.stateTaxTotal;
 
-    if (grossInputSalary >= 1 && grossInputSalary <= 8500 && (inputState === "nyc" || inputState === "new york" || inputState === "ny") ) {
+    if (grossInputSalary >= 1 && grossInputSalary <= 8500 ) {
         window.stateTaxTotal = parseInt(grossInputSalary * firstSinglesNYBracket);
         return stateTaxes.innerHTML = "$" + stateTaxTotal;
     } else if (grossInputSalary >= 8501 && grossInputSalary <= 11700) {
