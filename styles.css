@@ -1,70 +1,77 @@
 * {
-   background-repeat: no-repeat;
-    font-family: Arial, Helvetica, sans-serif;
-    grid-gap: 1em;
-
+  background-repeat: no-repeat;
+  font-family: Arial, Helvetica, sans-serif;
+  grid-gap: 0.4em;
 }
 
 body {
   /* background-image: url(https://i.imgur.com/CgKDPlb.gif); */
   text-align: center;
   object-fit: cover;
-  background-color: lightyellow;
+  background-color: whitesmoke;
   border-radius: 1em;
-  padding: .5em;
+  padding: 0.5em;
 }
 
-body h1{
-  background-color: coral;
-  border-radius: 1em;
+body h1 {
+  background-color: rgb(168, 168, 168);
+  border-radius: 0.5em;
   border: solid;
-  padding: .33em;
+  padding: 0.25em;
   border-color: black;
 }
 
-
-.grossIncome{
+.grossIncome {
   background-color: rgb(229, 229, 229);
-  border-radius: .5em;
+  border-radius: 0.5em;
+  border: solid;
+  border-color: black;
   text-align: center;
   padding: 1%;
-  font-size: medium;
+  font-size: large;
+  font-family: sans-serif;
 }
 
-.submitButton{
+.submitButton {
   background-color: red;
-  border-radius: .5em;
+  border-radius: 0.5em;
   color: white;
-  padding: 1%;
+  border: solid;
+  border-color: black;
+  padding: 1.2%;
 }
 
-.incomeContainer, .taxesContainer, .retirementContainer {
+.incomeContainer,
+.taxesContainer,
+.retirementContainer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   border: solid;
   border-radius: 1em;
-  margin: .5em;
+  margin: 0.5em;
   background-color: rgb(229, 229, 229);
-  padding-left: .5em;
-  padding-right: .5em;
-}
-    
-.taxesContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
 }
 
+.taxesContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
 
 @media screen and (max-width: 560px) {
-  .incomeContainer, .taxesContainer, .retirementContainer, .singleFilerContainer{
-      display: grid;
-      /* When Page width reaches 975px it turns to 1 column */
-      /* grid-template-columns: 1fr; */
-      font-size: 85%;
+  .incomeContainer,
+  .taxesContainer,
+  .retirementContainer,
+  .singleFilerContainer {
+    display: grid;
+    /* When Page width reaches 975px it turns to 1 column */
+    /* grid-template-columns: 1fr; */
+    font-size: 85%;
   }
 }
 
-.taxBracketContainer{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+.taxBracketContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }

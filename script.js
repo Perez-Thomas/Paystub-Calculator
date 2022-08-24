@@ -18,7 +18,7 @@ function allFunctions() {
 
 // FEDERAL - TAX BRACKETS
 function federal() {
-  document.querySelector("html").style.backgroundColor = "lightblue";
+  document.querySelector("html").style.backgroundColor = "whitesmoke";
   document.querySelector(".incomeContainer").style.backgroundColor =
     "lightblue";
   document.querySelector(".taxesContainer").style.backgroundColor =
